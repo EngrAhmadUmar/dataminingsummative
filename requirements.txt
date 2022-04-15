@@ -4,3 +4,4 @@ pandas>=0.19
 streamlit
 xlrd
 openpyxl
+keras
