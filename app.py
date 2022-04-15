@@ -45,7 +45,7 @@ def main():
     #
     # # Display Books
     if st.button("Predict"):
-      prediction = model.predict(dataframe)
+      prediction = model.predict(dataframedf.iloc[: , 1:])
 
       result = prediction
       st.write(result)
