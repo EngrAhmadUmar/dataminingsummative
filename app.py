@@ -31,19 +31,14 @@ def main():
     # display the front end aspect
     st.markdown(html_temp, unsafe_allow_html=True)
     default_value_goes_here = ""
+    uploaded_file = st.file_uploader("Please upload a XLSX file containing vitals details of the patient(s) you want to predict for.", type="xlsx")
 
     global dataframe
-  
-    df = pd.read_excel('Test.xlsx')
-    dataframe = df
-        # st.dataframe(df)
-        # st.table(df)
-
-    # attributes = [ball_control, short_passing, dribbling, crossing, curve]
-    #
+    if uploaded_file:
+        df = pd.read_excel(uploaded_file)
+        dataframe = df
     result = ""
-    #
-    # # Display Books
+
     if st.button("Predict"):
       prediction = model.predict(dataframe.iloc[: , 1:])
 
