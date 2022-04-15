@@ -23,7 +23,7 @@ def main():
 
     # display the front end aspect
     st.markdown(html_temp, unsafe_allow_html=True)
-    default_value_goes_here = "
+    default_value_goes_here = ""
 
     global dataframe
   
