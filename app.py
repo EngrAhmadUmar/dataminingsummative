@@ -7,6 +7,12 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
+from keras.optimizers import adam_v2
+from keras.layers import Dropout
+from keras import regularizers
+from keras.models import Sequential
+from keras.layers import LSTM
+from keras.layers import Dense
 
 
 # loading the trained model
